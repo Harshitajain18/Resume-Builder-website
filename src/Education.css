@@ -1,0 +1,17 @@
+.education {
+  color: #1f6f78;
+  margin-top: 50px;
+}
+.degree {
+  color: #1f6f78;
+}
+.education-box {
+  border: 2px solid #1f6f78;
+  padding: 20px;
+  margin-left: 500px;
+  margin-right: 500px;
+  margin-top: 20px;
+  border-radius: 4px;
+  box-shadow: 10px 10px 5px grey;
+  height: auto;
+}

@@ -1,0 +1,36 @@
+.tech{
+    color: #1f6f78;
+    margin-top: 50px;
+}
+.tech-btn{
+    color: white;
+    background-color: #1f6f78;
+    border: none;
+    height: 30px;
+    width: 80px;
+    margin-left: 7px;
+    font-size:medium;
+}
+.remove{
+    color: white;
+    background-color: #1f6f78;
+    border: none;
+    height: 30px;
+    width: 80px;
+    margin-left: 7px;
+    font-size:medium;
+}
+.remove:hover{
+    color: white;
+    background-color: red;
+    cursor: pointer;
+}
+.tech-box{
+    border: 2px solid #1f6f78;
+    margin-left: 500px;
+    margin-right: 500px;
+    padding: 6px;
+    height: auto;
+    box-shadow: 10px 10px 5px grey;
+    
+}
