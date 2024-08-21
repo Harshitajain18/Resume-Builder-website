@@ -23,15 +23,6 @@
     text-decoration: none;
     padding: 4px 10px;
 }
-/* input[type="text"] {
-    width: 250px;  
-    height:50px; 
-  }
-  input[type="mail"] {
-    width: 250px;  
-    height:50px;  
-  }
-  input[type="tel"] {
-    width: 250px;  
-    height:50px; 
-  } */
+.stepper{
+  border:#1f6f78;
+}

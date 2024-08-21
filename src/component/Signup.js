@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import { VscAccount } from "react-icons/vsc";
 
 function Signup(){
     return(
         <div>
-            <h1 className="signup">SIGN UP</h1>
+            <h1 className="signup">SIGN UP <VscAccount /></h1>
             <div className="box">
             <input type="text" placeholder="Enter First Name" style={{marginRight:"6px"}}></input>
             
