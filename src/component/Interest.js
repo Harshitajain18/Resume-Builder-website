@@ -5,37 +5,50 @@ function Interest(){
     const [input,setInput] = useState("");
     const [list,setList] = useState([]);
 
-    const HandleInput = (event) => {
-        setInput(event.target.value);
+    const AddCertificate = () =>{
+        setList([...list,input]);
+        setInput("");
     }
 
-    const HandleList = () => {
-        setList([...list , input])
-        setInput("")
-    }
-
-    const HandleRemove = (index) => {
-        let newList = [...list]
+    const Remove = (index) =>{
+        const newList = [...list];
         newList.splice(index,1);
-        setList([...newList]);
+        setList(newList);
     }
 
     return(
         <div>
             <h1 className="interest">Certifications</h1>
+
             <div className="certificate-box">
-            <input type="text" placeholder="Enter Certificates" value={input} onChange={HandleInput} style={{marginTop:"10px", width:"250px" , height:"50px", paddingLeft:"5px"}}></input>
-            <button className="certificate-btn" onClick={HandleList}>Add Certificate</button>
+            <input type="text" placeholder="Enter Certificates" value={input} onChange={(e)=>{setInput(e.target.value)}} style={{marginTop:"10px", width:"250px" , height:"40px", paddingLeft:"5px"}}></input>
+            <button className="certificate-btn" onClick={AddCertificate}>Add Certificate</button>
             <br></br>
-            <input type="text" placeholder="Enter Certificates" style={{marginTop:"10px", width:"250px" , height:"50px", paddingLeft:"5px"}}></input>
+            </div>
+
+            <div className="certificate-box" style={{border:"1px solid #ccc", borderRadius:"2px" }}>
+            <ul>
+                {
+                    list.map((Certificate,index)=>(
+                        <li key={index} style={{ marginBottom: "5px", display: "flex", justifyContent: "space-between" }}>{Certificate}
+                        <button className="remove" onClick={Remove}>Remove</button>
+                        </li>
+                    ))
+                }
+            </ul>
+            </div>
+            
+
+            {/* <input type="text" placeholder="Enter Certificates" style={{marginTop:"10px", width:"250px" , height:"50px", paddingLeft:"5px"}}></input>
             <button onClick={HandleRemove} className="remove">Remove</button>
             
             <ul>
               {list.map((certificate,index) => (
                 <li style={{listStyleType:"none"}} key={index}>{certificate}</li>
               ))}
-            </ul>
-            </div>
+            </ul> */}
+
+            
             <Link to='/education' className="back" >Back</Link>
         </div>
     )

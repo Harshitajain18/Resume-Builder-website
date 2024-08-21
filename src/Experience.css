@@ -18,3 +18,29 @@
 .bullet{
     color: #1f6f78;
 }
+.AddMore-btn{
+    color: white;
+    background-color: #1f6f78;
+    cursor: pointer;
+    border: none;
+    height: 30px;
+    width: 90px;
+    margin-top: 6px;
+    font-size: medium;
+    padding: 1px;
+}
+.remove-btn{
+    color: white;
+    background-color: #1f6f78;
+    border: none;
+    width: 65px;
+    padding: 1px;
+    height: 30px;
+    margin-top: 3px;
+    font-size: medium;
+}
+.remove-btn:hover{
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
