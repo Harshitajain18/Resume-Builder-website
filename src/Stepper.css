@@ -1,0 +1,36 @@
+.prsnldetail,.linkdetail,.techdetail,.workdetail,.projectdetail,.degreedetail,.certificatedetail{
+    color: black;
+    font-size:xx-large;
+    padding: 4px;
+    border: 1px solid black;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.prsnldetail:hover{
+    color:red;
+    cursor: pointer;
+}
+.linkdetail:hover{
+    color:red;
+    cursor: pointer;
+}
+.techdetail:hover{
+    color:red;
+    cursor: pointer;
+}
+.workdetail:hover{
+    color:red;
+    cursor: pointer;
+}
+.projectdetail:hover{
+    color:red;
+    cursor: pointer;
+}
+.degreedetail:hover{
+    color:red;
+    cursor: pointer;
+}
+.certificatedetail:hover{
+    color:red;
+    cursor: pointer;
+}

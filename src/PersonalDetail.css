@@ -23,3 +23,15 @@
     text-decoration: none;
     padding: 4px 10px;
 }
+.save{
+    background-color: #1f6f78;
+    color: white;
+    border: none;
+    height: 30px;
+    width:85px;
+    font-size: large;
+    margin-bottom: 10px;
+    text-decoration: none;
+    padding: 4px 10px;
+    cursor: pointer;
+}

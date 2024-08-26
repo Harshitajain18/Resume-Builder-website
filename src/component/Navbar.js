@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom";
+import '../Navbar.css';
 import { VscAccount } from "react-icons/vsc";
 import { useLocation } from "react-router-dom";
 
 function Navbar(){
    const location = useLocation();
-    const IsHomePage = location.pathname==='/home';
+    const IsHomePage = location.pathname==='/';
     return(
         <div>
            
