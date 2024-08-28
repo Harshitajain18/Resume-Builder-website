@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import '../Navbar.css';
+import '../styles/Navbar.css';
 import { VscAccount } from "react-icons/vsc";
 import { useLocation } from "react-router-dom";
 

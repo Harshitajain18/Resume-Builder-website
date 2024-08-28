@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import '../Interest.css';
+import '../styles/Interest.css';
 import Stepper from "./Stepper";
 
 function Interest(){
@@ -15,7 +15,7 @@ function Interest(){
         setList([...list,input]);
         setInput("");
     }
-
+    
     const Remove = (index) =>{
         const newList = [...list];
         newList.splice(index,1);

@@ -1,67 +1,73 @@
-import { useState } from "react";
+import {useEffect,useState } from "react";
 import { Link } from "react-router-dom";
-import '../Education.css';
+import '../styles/Education.css';
 import Stepper from "./Stepper";
 
 function Education(){
+    const initialValues={InstituteName:"",CourseName:"",Year:""};
 
-    const [degree, setDegree] = useState([{ id: 1 }]);
+    const [degree, setDegree] = useState(() => {
+        const savedData = JSON.parse(localStorage.getItem('degree'));
+        return Array.isArray(savedData) ? savedData : [initialValues];
+    });
+
+    useEffect(() => {
+        const savedData = JSON.parse(localStorage.getItem('degree'));
+        if (Array.isArray(savedData)) {
+            setDegree(savedData);
+        }
+    }, []);
 
     const AddDegree = () => {
-        setDegree([...degree, { id: degree.length + 1 }]);
-    }
+        setDegree([...degree, { ...initialValues }]);
+    };
 
     const RemoveDegree = (index) => {
-        const NewList = [...degree];
-        NewList.splice(index, 1);
-        setDegree(NewList);
-    }
-
-    const initialValues = { CollegeName: "", CourseName: "", Year: "" };
-    const [data, setData] = useState(initialValues);
-
-    const handleInputChange = (index, e) => {
-        const { name, value } = e.target;
-        const updatedData = { ...data, [name]: value };
-        setData(updatedData);
-    }
+        const newDegree = [...degree];
+        newDegree.splice(index, 1);
+        setDegree(newDegree);
+    };
+    const handleInputChange = (index, field, value) => {
+        const newDegree = [...degree];
+        newDegree[index][field] = value;
+        setDegree(newDegree);
+    };
 
     const saveData = () => {
-        localStorage.setItem('educationData', JSON.stringify(data));
-        alert("Data saved successfully!");
-    }
-
-    return (
+        localStorage.setItem('degree', JSON.stringify(degree));
+        alert("Data saved sucessfully")
+    };
+ return (
         <div>
             <Stepper/>
             <h1 className="education">Education</h1>
             <ul>
                 {degree.map((degrees, index) => (
-                    <li key={degrees.id}>
+                    <li key={index}>
                         <div className="education-box" key={degrees.id}>
                             <h2 className="degree">Degree {index + 1}</h2>
                             <input
                                 type="text"
-                                name="CollegeName"
-                                placeholder="Enter College Name"
+                                value={degree.InstituteName}
+                                placeholder="Enter Institute Name"
                                 style={{ marginTop: "10px", width: "250px", height: "50px", paddingLeft: "5px" }}
-                                onChange={(e) => handleInputChange(index, e)}
+                                onChange={(e) => handleInputChange(index, "Institute Name", e.target.value)}
                             />
                             <br></br>
                             <input
                                 type="text"
-                                name="CourseName"
+                                value={degree.CourseName}
                                 placeholder="Enter Course Name"
                                 style={{ marginTop: "10px", width: "250px", height: "50px", paddingLeft: "5px" }}
-                                onChange={(e) => handleInputChange(index, e)}
+                                onChange={(e) => handleInputChange(index,"CourseName", e.target.value)}
                             />
                             <br></br>
                             <input
                                 type="text"
-                                name="Year"
+                                value={degree.Year}
                                 placeholder="Enter year"
                                 style={{ marginTop: "10px", width: "250px", height: "50px", paddingLeft: "5px" }}
-                                onChange={(e) => handleInputChange(index, e)}
+                                onChange={(e) => handleInputChange(index,"Year", e.target.value)}
                             />
                             <br></br>
                             <button className="AddMore-btn" onClick={AddDegree}>Add More</button>

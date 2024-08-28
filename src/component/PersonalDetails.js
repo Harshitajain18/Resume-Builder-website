@@ -1,22 +1,22 @@
 import { Link } from "react-router-dom";
-import '../PersonalDetail.css';
+import '../styles/PersonalDetail.css';
 import Stepper from "./Stepper";
 import { useState } from "react";
 
 function PersonalDetails() {
     const initialValues = { Name: "", JobTitle: "", Email: "", Contact: "", Address: "" };
-    const [data, setData] = useState(() => {
-       const savedData = localStorage.getItem('data');
+    const [prsnldata, setPrsnlData] = useState(() => {
+       const savedData = localStorage.getItem('prsnldata');
         return savedData ? JSON.parse(savedData) : initialValues;
     });
 
     const HandleInput = (event) => {
         const { name, value } = event.target;
-        setData({...data, [name]: value });
+        setPrsnlData({...prsnldata, [name]: value });
     }
 
     const handleSave = () => {
-        localStorage.setItem('data', JSON.stringify(data));
+        localStorage.setItem('prsnldata', JSON.stringify(prsnldata));
         alert("Data saved successfully!");
     }
 
@@ -29,7 +29,7 @@ function PersonalDetails() {
                     type="text" 
                     name="Name" 
                     placeholder="Enter Name" 
-                    value={data.Name} 
+                    value={prsnldata.Name} 
                     onChange={HandleInput} 
                     style={{ marginTop: "10px", width: "250px", height: "50px", paddingLeft: "5px" }} 
                 />
@@ -38,7 +38,7 @@ function PersonalDetails() {
                     type="text" 
                     name="JobTitle" 
                     placeholder="Enter Job Title" 
-                    value={data.JobTitle} 
+                    value={prsnldata.JobTitle} 
                     onChange={HandleInput} 
                     style={{ marginTop: "6px", width: "250px", height: "50px", paddingLeft: "5px" }} 
                 />
@@ -47,7 +47,7 @@ function PersonalDetails() {
                     type="email" 
                     name="Email" 
                     placeholder="Enter Email" 
-                    value={data.Email} 
+                    value={prsnldata.Email} 
                     onChange={HandleInput} 
                     style={{ marginTop: "6px", width: "250px", height: "50px", paddingLeft: "5px" }} 
                 />
@@ -56,7 +56,7 @@ function PersonalDetails() {
                     type="tel" 
                     name="Contact" 
                     placeholder="Contact number" 
-                    value={data.Contact} 
+                    value={prsnldata.Contact} 
                     onChange={HandleInput} 
                     style={{ marginTop: "6px", width: "250px", height: "50px", paddingLeft: "5px" }} 
                 />
@@ -64,7 +64,7 @@ function PersonalDetails() {
                 <textarea 
                     name="Address" 
                     placeholder="Address" 
-                    value={data.Address} 
+                    value={prsnldata.Address} 
                     onChange={HandleInput} 
                     style={{ marginTop: "6px", width: "250px", height: "90px", paddingLeft: "5px" }} 
                 />

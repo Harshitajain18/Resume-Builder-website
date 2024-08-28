@@ -1,19 +1,19 @@
 import { Link } from "react-router-dom";
-import "../Link.css";
+import "../styles/Link.css";
 import Stepper from "./Stepper";
 import { useState } from "react";
 
 function Url() {
   const initialValues = { LinkedinLink: "", GitHubLink: "" };
-  const [data, setData] = useState(initialValues);
+  const [linkdata, setLinkData] = useState(initialValues);
 
   const HandleInput = (event) => {
     const { name, value } = event.target;
-    setData({ ...data, [name]: value });
+    setLinkData({ ...linkdata, [name]: value });
   };
 
   const HandleSave = () => {
-    localStorage.setItem("data", JSON.stringify(data));
+    localStorage.setItem("linkdata", JSON.stringify(linkdata));
     alert("Data saved successfully!");
   };
 
@@ -26,7 +26,7 @@ function Url() {
           type="url"
           name="LinkedinLink"
           placeholder="Enter LinkedIn Link"
-          value={data.LinkedinLink}
+          value={linkdata.LinkedinLink}
           onChange={HandleInput}
           style={{marginTop: "20px",width: "250px",height: "50px",paddingLeft: "5px",}}
         ></input>
@@ -35,7 +35,7 @@ function Url() {
           type="url"
           name="GitHubLink"
           placeholder="Enter GitHub Link"
-          value={data.GitHubLink}
+          value={linkdata.GitHubLink}
           onChange={HandleInput}
           style={{marginTop: "10px",width: "250px",height: "50px",paddingLeft: "5px",}}
         ></input>

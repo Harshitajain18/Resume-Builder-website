@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import '../Experience.css';
+import '../styles/Experience.css';
 import Stepper from './Stepper';
 
 function Experience() {
     const initialValues = { Company: "", JobTitle: "", Duration: "", Point: "" };
     
     const [jobs, setJobs] = useState(() => {
-        const savedData = JSON.parse(localStorage.getItem('data'));
+        const savedData = JSON.parse(localStorage.getItem('jobdata'));
         return Array.isArray(savedData) ? savedData : [initialValues];
     });
 
     useEffect(() => {
-        const savedData = JSON.parse(localStorage.getItem('data'));
+        const savedData = JSON.parse(localStorage.getItem('jobdata'));
         if (Array.isArray(savedData)) {
             setJobs(savedData);
         }
@@ -35,7 +35,7 @@ function Experience() {
     };
 
     const saveData = () => {
-        localStorage.setItem('data', JSON.stringify(jobs));
+        localStorage.setItem('jobdata', JSON.stringify(jobs));
     };
 
     return (

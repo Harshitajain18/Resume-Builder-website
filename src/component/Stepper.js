@@ -7,13 +7,12 @@ import { MdCastForEducation } from "react-icons/md";
 import { GiRibbonMedal } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import '../Stepper.css'; 
+import '../styles/Stepper.css'; 
 function Stepper(){
     const location=useLocation();    
     const HideStepper= location.pathname === '/' ||  location.pathname=== '/signin' || location.pathname === '/Signup';
     return(
 <div>
-    
 <ul>
         { 
             !HideStepper && (

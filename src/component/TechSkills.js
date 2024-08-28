@@ -1,6 +1,6 @@
 import {useState } from "react";
 import { Link } from "react-router-dom";
-import '../TechSkills.css';
+import '../styles/TechSkills.css';
 import Stepper from "./Stepper";
 
 function TechSkills() {
