@@ -15,9 +15,15 @@ function Signup(){
         setSignUpData({...signupdata, [name]: value });
     }
 
+   
     const handleSave = () => {
-        localStorage.setItem('signupdata', JSON.stringify(signupdata));
+        if (signupdata.Password !== signupdata.ReEnterPass) {
+            alert("Passwords must be the same!");
+            return; 
+        }
+        localStorage.setItem('signupdata','true', JSON.stringify(signupdata));
         alert("Data saved successfully!");
+        
     }
 
     return(
@@ -41,7 +47,8 @@ function Signup(){
             <input type="checkbox"/> <span> I accept terms & conditions</span>
             <br></br>
             <br></br>
-            <button className="btn" onClick={handleSave}>Sign Up</button>
+            <Link to='/personal-details' className="btn" onClick={handleSave}>Sign Up</Link>
+            {/* <button className="btn" onClick={handleSave}>Sign Up</button> */}
             <br></br>
             <span> Already have an account ?</span>
             <Link to='/signin' style={{marginLeft:"4px"}} >SignIn</Link>

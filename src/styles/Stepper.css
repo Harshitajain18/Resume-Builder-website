@@ -7,31 +7,20 @@
     margin-bottom: 2px;
     /* margin-left: 3px; */
 }
-.prsnldetail:hover{
+.prsnldetail:hover,.linkdetail:hover,.techdetail:hover,.workdetail:hover,.certificatedetail:hover,.projectdetail:hover,.degreedetail:hover{
     color:red;
     cursor: pointer;
 }
-.linkdetail:hover{
-    color:red;
-    cursor: pointer;
+.step{
+    list-style-type: none;  
+    padding: 0;             
+    margin: 20px;    
+    justify-content: center;         
+    display: flex;        
+    flex-direction: row; 
+    align-items: flex-start; 
 }
-.techdetail:hover{
-    color:red;
-    cursor: pointer;
-}
-.workdetail:hover{
-    color:red;
-    cursor: pointer;
-}
-.projectdetail:hover{
-    color:red;
-    cursor: pointer;
-}
-.degreedetail:hover{
-    color:red;
-    cursor: pointer;
-}
-.certificatedetail:hover{
-    color:red;
-    cursor: pointer;
-}
+
+li {
+    margin-right: 5px; 
+} 

@@ -13,17 +13,17 @@ function Stepper(){
     const HideStepper= location.pathname === '/' ||  location.pathname=== '/signin' || location.pathname === '/Signup';
     return(
 <div>
-<ul>
+<ul className="step">
         { 
             !HideStepper && (
                 <>
                 <li> <NavLink to='/personal-details'> <IoPersonSharp  className="prsnldetail"/> </NavLink> </li>
-                <li> <NavLink to='/link-details'> <RiLinksLine className="linkdetail"/> </NavLink> </li>
-                <li> <NavLink to='/Technical-skills'> <FaBrain className="techdetail"/> </NavLink></li>
+                <li> <NavLink to='/link-details'> <RiLinksLine  className="linkdetail"/> </NavLink> </li>
+                <li> <NavLink to='/Technical-skills'> <FaBrain  className="techdetail"/> </NavLink></li>
                 <li> <NavLink to='/work-experience'> <MdOutlineWork className="workdetail"/> </NavLink> </li>
-                <li> <NavLink to='/projects'> <GoProjectRoadmap className="projectdetail"/> </NavLink> </li>
-                <li> <NavLink to='/education'> <MdCastForEducation className="degreedetail"/> </NavLink> </li>
-                <li> <NavLink to='/interest'> <GiRibbonMedal className="certificatedetail"/> </NavLink> </li>
+                <li> <NavLink to='/projects'> <GoProjectRoadmap  className="projectdetail"/> </NavLink> </li>
+                <li> <NavLink to='/education'> <MdCastForEducation  className="degreedetail"/> </NavLink> </li>
+                <li> <NavLink to='/interest'> <GiRibbonMedal  className="certificatedetail"/> </NavLink> </li>
                 </>
             )
         }

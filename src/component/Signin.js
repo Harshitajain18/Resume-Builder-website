@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, Navigate } from "react-router-dom";
 function Signin(){
     const initialValues = { FirstName: "", LastName:"", Email: "", Password: "", ReEnterPass: ""};
     const [signIndata, setSignInData] = useState(() => {
@@ -12,6 +13,10 @@ function Signin(){
     }
 
     const handleSave = () => {
+        if(signIndata.Password !== signIndata.ReEnterPass){
+            alert("Password must be same!");
+            return;
+        }
         localStorage.setItem('signIndata', JSON.stringify(signIndata));
         alert("Data saved successfully!");
     }
@@ -36,6 +41,8 @@ function Signin(){
             <input type="checkbox"/> <span> I accept terms & conditions</span>
             <br></br>
             <br></br>
+            <Link to='/personal-details' className="btn" onClick={handleSave}>Sign In</Link>
+
             <button className="btn" onClick={handleSave}>Sign In</button>
             </div>
            
