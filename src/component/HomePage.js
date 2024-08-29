@@ -7,7 +7,7 @@ function HomePage() {
         let login = localStorage.getItem('signup');
         if (login  && login !=="") {
             navigate('/personal-details'); 
-        } else {
+        } else { 
             navigate('/signup'); 
         }
     };

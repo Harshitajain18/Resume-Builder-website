@@ -14,7 +14,7 @@ function Education(){
     useEffect(() => {
         const savedData = JSON.parse(localStorage.getItem('degree'));
         if (Array.isArray(savedData)) {
-            setDegree(savedData);
+            setDegree(savedData);   
         }
     }, []);
 

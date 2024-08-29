@@ -55,6 +55,7 @@ function Interest(){
             
             <button className="save" onClick={saveCertificates}>Save</button>
             <br />
+            <Link to='/template' className="back" >Show My Resume</Link>
             <Link to='/education' className="back">Back</Link>
         </div>
     );

@@ -13,6 +13,7 @@ import Projects from './component/Projects';
 import Education from './component/Education';
 import Interest from './component/Interest';
 import Stepper from './component/Stepper';
+import Template from './component/Template';
 function App() {
   return (
     <div className="App">
@@ -32,6 +33,7 @@ function App() {
           <Route path='/projects' element={<Projects/>}></Route>
           <Route path='/education' element={<Education/>}></Route>
           <Route path='/interest' element={<Interest/>}></Route>
+          <Route path='/template' element={<Template/>}></Route>
         </Routes>
         </BrowserRouter>
 

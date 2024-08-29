@@ -1,0 +1,57 @@
+.temp-box{
+    border: 2px solid black;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 20px;
+    height: auto;
+    background-color: white;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; 
+    color: black;
+}
+.edu{
+    display: flex;
+    padding-left: 3px;
+}
+.tech {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    margin-top: 2px;
+}
+
+.tech h3 {
+    margin: 3px;
+    color: black; 
+}
+
+.tech ul {
+    display: flex;
+    list-style: none;
+}
+
+.tech li {
+    margin-right: 8px;
+    color: black;
+}
+/* .medal{
+    display: flex;
+    gap: 8px;
+    margin-top: 2px;
+    align-items: center;
+}
+.medal h3{
+    margin: 3px;
+    color: black; 
+}
+.medal ul{
+    display: flex;
+    list-style-type: none;  
+}
+.medal li{
+    margin-right: 8px;   
+} */
