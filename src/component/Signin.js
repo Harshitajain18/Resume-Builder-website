@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 function Signin(){
     const initialValues = { FirstName: "", LastName:"", Email: "", Password: "", ReEnterPass: ""};
     const [signIndata, setSignInData] = useState(() => {
@@ -43,7 +43,7 @@ function Signin(){
             <br></br>
             <Link to='/personal-details' className="btn" onClick={handleSave}>Sign In</Link>
 
-            <button className="btn" onClick={handleSave}>Sign In</button>
+            {/* <button className="btn" onClick={handleSave}>Sign In</button> */}
             </div>
            
         </div>

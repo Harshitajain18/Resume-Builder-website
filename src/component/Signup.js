@@ -31,7 +31,6 @@ function Signup(){
             <h1 className="signup">SIGN UP </h1>
             <div className="box">
             <input type="text"  name="FirstName" value={signupdata.FirstName} onChange={HandleInput} placeholder="Enter First Name" style={{marginRight:"6px"}}></input>
-            
             <input type="text"  name="LastName" value={signupdata.LastName}  onChange={HandleInput} placeholder="Enter Last Name" ></input>
             <br></br>
             <br></br>

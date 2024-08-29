@@ -9,6 +9,9 @@ function Protected(props){
         if(! login){
             navigate('/signup')
         }
+        else {
+            navigate('/personal-details');
+        }
     },[navigate]);
     return(
         <div>   

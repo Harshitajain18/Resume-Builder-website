@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes ,Route} from 'react-router-dom';
 import './App.css';
 import Protected from './component/Protected';
@@ -22,11 +21,11 @@ function App() {
       <hr></hr>
         <Routes>
           <Route path='/' element={<HomePage/>} />
-          {/* <Route path='/' element={<Protected Component={HomePage}/>}/> */}
+          <Route path='/' element={<Protected Component={HomePage}/>}/>
           <Route path='/resume' element={<Stepper/>} />
           <Route path='/signup' element={<Signup/>} />
-          <Route path='/signin' element={<Signin/>} />
-          <Route path='/personal-details' element={<Protected Component={ PersonalDetails}/>}/>
+          <Route path='/signin' element={<Signin/>} />          
+          <Route path='/personal-details' element={ <PersonalDetails />}/>
           <Route path='/link-details' element={<Url/>}/>
           <Route path='/Technical-skills' element={<TechSkills/>}/>
           <Route path='/work-experience' element={<Experience/>}></Route>

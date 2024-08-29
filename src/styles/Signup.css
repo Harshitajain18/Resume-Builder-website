@@ -8,10 +8,11 @@
   background-color: #1f6f78;
   color: white;
   height: 30px;
-  width: 80px;
+  width: 150px;
   border: none;
   margin-bottom: 4px;
   font-size: medium;
+  text-decoration: none;
 }
 .box {
   /* justify-content: center; */
