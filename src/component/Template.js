@@ -66,8 +66,6 @@ function Template() {
 
     return (
     <div>
-
-    
         <div className='temp-box'>
             <h1>{prsnldata.Name}</h1>
             <br></br>

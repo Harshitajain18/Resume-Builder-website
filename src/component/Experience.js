@@ -36,6 +36,7 @@ function Experience() {
 
     const saveData = () => {
         localStorage.setItem('jobdata', JSON.stringify(jobs));
+        alert("Data saved successfully")
     };
 
     return (

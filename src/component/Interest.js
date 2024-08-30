@@ -24,6 +24,7 @@ function Interest(){
 
     const saveCertificates = () => {
         localStorage.setItem('certificates', JSON.stringify(list));
+        alert("Data saved successfully")
     };
 
     return(

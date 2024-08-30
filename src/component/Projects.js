@@ -36,6 +36,7 @@ function Projects() {
 
     const saveData = () => {
         localStorage.setItem('project', JSON.stringify(project));
+        alert("Data saved successfully")
     };
 
     return (
