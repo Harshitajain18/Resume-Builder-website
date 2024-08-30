@@ -4,6 +4,7 @@ import { IoMailSharp } from "react-icons/io5";
 import { MdAddIcCall } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 function Template() {
     const [prsnldata, setPrsnlData] = useState({ Name: "", JobTitle: "", Email: "", Contact: "", Address: "" });
@@ -64,6 +65,8 @@ function Template() {
     },[]);
 
     return (
+    <div>
+
     
         <div className='temp-box'>
             <h1>{prsnldata.Name}</h1>
@@ -85,7 +88,7 @@ function Template() {
             <h2>{degree.Year}</h2>
             </div>
            
-           <div className='tech'>
+           <div className='techi'>
            <h3>Technical Skills:</h3>
             <ul>
                 {skills.map((skill, index) => (
@@ -93,9 +96,7 @@ function Template() {
                 ))}
             </ul>
            </div>
-            
 
-        
         <h3 style={{display:"flex",marginLeft:"3px"}}>Work Experience:</h3>
                 <ul>
                     {job.map((jobItem, index) => (
@@ -122,7 +123,7 @@ function Template() {
                         ))}
                      </ul>
             
-            <div className='medal'>
+            <div>
             <h3 style={{marginLeft:"3px",display:"flex"}}>Certificates:</h3>
             <ul>
                 {
@@ -132,9 +133,10 @@ function Template() {
                 }
             </ul>
             </div>
-           
-
         </div>
+        <Link to='/interest' className='back'>Back</Link>
+         </div>
+     
     );
 }
 

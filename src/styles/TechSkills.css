@@ -1,6 +1,8 @@
 .tech{
     color: #1f6f78;
     margin-top: 50px;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 .tech-btn{
     color: white;

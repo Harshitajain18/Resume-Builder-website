@@ -17,41 +17,24 @@
     display: flex;
     padding-left: 3px;
 }
-.tech {
+.techi {
     display: flex;
     align-items: center;
     gap: 8px; 
     margin-top: 2px;
 }
 
-.tech h3 {
+.techi h3 {
     margin: 3px;
     color: black; 
 }
 
-.tech ul {
+.techi ul {
     display: flex;
     list-style: none;
 }
 
-.tech li {
+.techi li {
     margin-right: 8px;
     color: black;
 }
-/* .medal{
-    display: flex;
-    gap: 8px;
-    margin-top: 2px;
-    align-items: center;
-}
-.medal h3{
-    margin: 3px;
-    color: black; 
-}
-.medal ul{
-    display: flex;
-    list-style-type: none;  
-}
-.medal li{
-    margin-right: 8px;   
-} */
