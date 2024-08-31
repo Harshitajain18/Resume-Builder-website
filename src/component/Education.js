@@ -37,21 +37,22 @@ function Education(){
         localStorage.setItem('degree', JSON.stringify(degree));
         alert("Data saved sucessfully")
     };
+    
  return (
         <div>
             <Stepper/>
             <h1 className="education">Education</h1>
             <ul>
-                {degree.map((degrees, index) => (
+                {degree.map((degree, index) => (
                     <li key={index}>
-                        <div className="education-box" key={degrees.id}>
+                        <div className="education-box" key={degree.id}>
                             <h2 className="degree">Degree {index + 1}</h2>
                             <input
                                 type="text"
                                 value={degree.InstituteName}
                                 placeholder="Enter Institute Name"
                                 style={{ marginTop: "10px", width: "250px", height: "50px", paddingLeft: "5px" }}
-                                onChange={(e) => handleInputChange(index, "Institute Name", e.target.value)}
+                                onChange={(e) => handleInputChange(index, "InstituteName", e.target.value)}
                             />
                             <br></br>
                             <input

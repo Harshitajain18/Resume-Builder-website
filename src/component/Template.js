@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 function Template() {
     const [prsnldata, setPrsnlData] = useState({ Name: "", JobTitle: "", Email: "", Contact: "", Address: "" });
     const [linkdata, setLinkData] = useState({ LinkedinLink: "", GitHubLink: "" });
-    const [degree, setDegree] = useState({ InstituteName: "", CourseName: "", Year: "" });
+    const [degree, setDegree] = useState([]);
     const [skills, setSkills] = useState([]); 
     const [job,setJobs]=useState([]);
     const [projects,setProject]=useState([]);
@@ -66,7 +66,7 @@ function Template() {
 
     return (
     <div>
-        <div className='temp-box'>
+        <div className='temp-box'> 
             <h1>{prsnldata.Name}</h1>
             <br></br>
 
@@ -79,12 +79,19 @@ function Template() {
            
             <hr style={{ border: '1px solid black',marginTop:"2px" }}></hr>
 
-            <div className='edu'>
-            <h3>Education:</h3>
-            <h2>{degree.InstituteName}</h2>
-            <h2>{degree.CourseName}</h2>
-            <h2>{degree.Year}</h2>
-            </div>
+           
+            <h3 className='edu'>Education:</h3>
+                <ul>
+                    {degree.map((degItem,index)=>(
+                        <li style={{listStyleType:"none"}} key={index}>
+                            <div style={{marginLeft:"3px",display:"flex",justifyContent:"space-between"}}> 
+                            <p>{degItem.InstituteName}</p>
+                            <p style={{marginRight:"4px"}}>{degItem.Year}</p>
+                            </div>
+                            <p style={{display:"flex",marginLeft:"3px"}}>{degItem.CourseName} </p>       
+                        </li>
+                    ))};
+                </ul>
            
            <div className='techi'>
            <h3>Technical Skills:</h3>
@@ -95,7 +102,7 @@ function Template() {
             </ul>
            </div>
 
-        <h3 style={{display:"flex",marginLeft:"3px"}}>Work Experience:</h3>
+        <h3 style={{display:"flex",marginLeft:"3px" , marginBottom:"2px"}}>Work Experience:</h3>
                 <ul>
                     {job.map((jobItem, index) => (
                          <li style={{listStyleType:"none"}} key={index}>
@@ -110,7 +117,7 @@ function Template() {
                 </ul>
       
             
-            <h3 style={{display:"flex",marginLeft:"3px",marginTop:"2px"}}>Projects:</h3>
+            <h3 style={{display:"flex",marginLeft:"3px",marginTop:"2px", marginBottom:"2px"}}>Projects:</h3>
                      <ul>
                         {projects.map((projectItem,index)=>(
                             <li style={{listStyleType:"none"}} key={index}>
@@ -122,7 +129,7 @@ function Template() {
                      </ul>
             
             <div>
-            <h3 style={{marginLeft:"3px",display:"flex"}}>Certificates:</h3>
+            <h3 style={{marginLeft:"3px",display:"flex", marginBottom:"2px"}}>Certificates:</h3>
             <ul>
                 {
                     certificate.map((certificate,index)=>(
