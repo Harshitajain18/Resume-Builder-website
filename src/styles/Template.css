@@ -39,3 +39,18 @@
     margin-right: 8px;
     color: black;
 }
+.savebtn{
+    color: white;
+    background-color:  #1f6f78;
+    border: none;
+    height: 30px;
+    width: 100px;
+    padding: 1px;
+    margin: 2px;
+    font-size: medium;
+    cursor: pointer;
+}
+
+
+
+
