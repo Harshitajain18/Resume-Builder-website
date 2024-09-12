@@ -51,3 +51,10 @@
 .navbar-link.active{
     color: red;
 }
+.img1{
+  height: 190px;
+  width: 190px;
+  border-radius: 95px;
+  margin-top: 4px;
+  margin-left: 630px;
+}
